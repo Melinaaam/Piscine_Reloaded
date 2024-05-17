@@ -1,0 +1,6 @@
+touch Z
+vim Z
+Z
+:x
+i
+cat Z

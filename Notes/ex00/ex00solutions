@@ -1,0 +1,49 @@
+- mkdir test0 : creer dossier test0
+- touch test1 : creer fichier test1
+- mkdir test2 : creer dossier test2
+- touch test3 : creer fichier test3
+- ln -v test3 test5 : Creer un lien vers un autre - ficher que l'ont creer en meme temps(test5)
+- touch test4 : creer fichier test3
+- ln -s test0 test6 : creation lien symboliaue depuis test0
+
+ls -l : afficher 
+
+- truncate -s 4 test1 : changer taille
+- truncate -s 1 test3
+- truncate -s 2 test4
+
+- chmod 715 test0 : droits 
+- chmod 714 test1
+- chmod 504 test2
+- chmod 404 test3
+- chmod 641 test4
+
+- touch -ht 202406012047 test0 : changer date et heure
+- touch -ht 202406012146 test1
+- touch -ht 202406012245 test2
+- touch -ht 202406012344 test3
+- touch -ht 202406012343 test4
+- touch -ht 202406012220 test6
+
+notes : 
+chmod +x : donne tous les droits 
+
+0 : - - - (aucun droit)
+
+1 : - - x (exécution)
+
+2 : - w - (écriture)
+
+3 : - w x (écriture et exécution)
+
+4 : r - - (lecture seule)
+
+5 : r - x (lecture et exécution)
+
+6 : r w - (lecture et écriture)
+
+7 : r w x (lecture, écriture et exécution)
+ link), lier deux fichiers sans qu’ils soient identiques soft link
+
+
+

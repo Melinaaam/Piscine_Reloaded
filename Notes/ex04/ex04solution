@@ -1,0 +1,3 @@
+bess-f3r4s13% cat MAC.sh
+#!/bin/sh
+ifconfig | grep -o -E 'ether'
