@@ -1,19 +1,20 @@
 NAME = ft_display_file
-FLAGS = -Wall -Wextra -Werror
 
 SRC = ft_display_file.c
-OBJ = ft_display_file.o
 
-all: ${NAME}
+OBJ = $(SRC:.c=.o)
 
-${NAME}:
-	cc ${FLAGS} -c ${SRC}
-	cc -o ${NAME} ${OBJ}
+all: $(NAME)
 
-	clean:
-		rm -rf ${OBJ}
-	fclean: clean
-		rm -rf ${NAME}
-	re: fclean all
+$(NAME):
+	cc -Wall -Wextra -Werror -o $(NAME) $(SRC)
 
-	.PHONY: all clean fclean re
+clean:
+	/bin/rm -f $(OBJ)
+
+fclean: clean
+	/bin/rm -f $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
